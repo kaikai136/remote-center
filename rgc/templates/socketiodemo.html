@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>练习二</title>
+    <script type="text/javascript" src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.bootcss.com/socket.io/1.5.1/socket.io.min.js"></script>
+</head>
+<body>
+<div>
+    <a href="javascript:test('hello')">点击事件</a>
+    <input type="text" name="test" value="0" />
+</div>
+</body>
+<script>
+
+      var socket = io();
+      socket.on('connect', function() {
+        socket.emit('my event', { data: "I'm connected!" })
+      });
+
+      socket.on('server_respon', function(data) {
+        console.log(data)
+      });
+
+    {#function test(name) {#}
+    {##}
+    {#    var my_socket = io.connect(location.protocol+'//'+document.domain + ':' + location.port);#}
+    {#    my_socket.on("connect", function () {#}
+            {#my_socket.emit("car event", {data: name});#}
+    {#        my_socket.emit("my event", {data: name});#}
+    {#    });#}
+    {#    var namespace = '/test';#}
+    {#    var hrefs = location.protocol+'//'+document.domain + ':' + location.port + namespace;#}
+    {#    console.log(hrefs);#}
+    {#    var my_socket2 = io.connect(hrefs);#}
+    {#    my_socket2.on("server_response", function (res) {#}
+    {#            console.log(res)#}
+    {#        });#}
+    {#}#}
+    {#test("muyongzhen")#}
+</script>
+</html>

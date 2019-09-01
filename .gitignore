@@ -1,0 +1,15 @@
+*.idea
+.DS_Store
+rgc/.DS_Store
+venv/
+rgc/model/__pycache__/
+rgc/tools/__pycache__/
+rgc/views/car/__pycache__/
+rgc/views/user/__pycache__/
+rgc/views/platform/__pycache__/
+rgc/views/connectdevice/__pycache__/
+__pycache__
+rgc/__pycache__
+logs
+logs/log*
+*.pyc
